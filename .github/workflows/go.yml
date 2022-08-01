@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
     
 env:
-  GOARCH: x64
+  GOARCH: amd64
   GOOS: linux
 
 jobs:
