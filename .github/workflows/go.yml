@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
     
-ENV:
+env:
   GOARCH=x64
   GOOS=linux
 
