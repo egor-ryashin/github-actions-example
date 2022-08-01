@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    
+ENV:
+  GOARCH=x64
+  GOOS=linux
 
 jobs:
 
@@ -19,7 +23,13 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v ./...
+      run: go build main.go -o testapp
 
     - name: Test
       run: go test -v ./...
+      
+    - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: 
+          path: testapp
