@@ -42,4 +42,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: egor-ryashin/gat:latest
+        tags: egorryashin/gat:latest
